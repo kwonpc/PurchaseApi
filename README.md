@@ -50,29 +50,28 @@ Purchase }|-- User
 </code></pre>
 
 ## 제약조건
-Spring boot 를 바탕으로 java 또는 kotlin 을 이용하여 작성
-Request / Response 대한 log를 한 줄로 출력
-요구사항에 정의 된 응답 규격을 만족
-in-memory 또는 docker 등을 이용하여 persistence-layer를 구성하고 해당 layer
-에 데이터를 저장 및 조회
-application 기동 시 제공 되는 csv 파일을 이용하여 구매 데이터 초기 로딩
-기능에 대한 단위 / 통합 테스트 작성
+* Spring boot 를 바탕으로 java 또는 kotlin 을 이용하여 작성
+* Request / Response 대한 log를 한 줄로 출력
+* 요구사항에 정의 된 응답 규격을 만족
+* in-memory 또는 docker 등을 이용하여 persistence-layer를 구성하고 해당 layer에 데이터를 저장 및 조회
+* application 기동 시 제공 되는 csv 파일을 이용하여 구매 데이터 초기 로딩
+* 기능에 대한 단위 / 통합 테스트 작성
 
 ## 추가요구사항(선택)
 1. 필수 요구 사항 3 추가 기능 : 캐싱 및 페이징 처리, 캐시는 일정 주기 (주기는 임의로 지정 가능)로 캐시를 갱신하도록 스케쥴링
 2. 필수 요구 사항 2 추가 기능 : Oauth 를 이용하여 회원가입 / 로그인을 구현하고, 사용자 번호 대신 oauth token을 사용. 요청은 oauth 표준인 Authorization Header 를 사용
 
 ## 개발 및 문제해결 현황
-상품 관리 CURD API ( post, get, put, delete, list )
-구매 정보 저장 API 
-구매 통계 출력 API ( 사용자, 상품별 구매 합계 및 카운트 )
-Spring boot를 바탕으로 java를 이용한 코드작성
-필터와 인터셉터를 이용한 Request / response 에 대한 log를 한줄씩 출력
-요구사항에 정의된 요청/응답 (Json) 규격
-H2 DB를 이용한 in-memory DB 사용
-application 기동시 정의된 schema, data를 initialization
-기본 기능에 대한 Junit Test 코드 작성
-Ehcache3를 이용한 캐싱처리 (600초 주기 만료, 상품관리는 갱신 발생시 cache갱신)
+* 상품 관리 CURD API ( post, get, put, delete, list )
+* 구매 정보 저장 API 
+* 구매 통계 출력 API ( 사용자, 상품별 구매 합계 및 카운트 )
+* Spring boot를 바탕으로 java를 이용한 코드작성
+* 필터와 인터셉터를 이용한 Request / response 에 대한 log를 한줄씩 출력
+* 요구사항에 정의된 요청/응답 (Json) 규격
+* H2 DB를 이용한 in-memory DB 사용
+* application 기동시 정의된 schema, data를 initialization
+* 기본 기능에 대한 Junit Test 코드 작성
+* Ehcache3를 이용한 캐싱처리 (600초 주기 만료, 상품관리는 갱신 발생시 cache갱신)
 
 ## 프로젝트 빌드 및 실행 방법
 ### 개발 환경 
