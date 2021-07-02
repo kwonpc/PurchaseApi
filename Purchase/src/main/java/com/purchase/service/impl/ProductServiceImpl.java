@@ -47,9 +47,9 @@ public class ProductServiceImpl implements ProductService{
 	@Transactional
 	public boolean update(ProductDTO product) throws Exception{	
 		Optional<Product> opt_product = productRepository.findById(product.getId());
-		Product sel_product = opt_product.get();
 		
 		if(opt_product.isPresent()) {
+			Product sel_product = opt_product.get();
 			sel_product.updateProduct(product.getName(), product.getPrice());
 
 		}else {
